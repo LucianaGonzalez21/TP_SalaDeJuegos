@@ -1,0 +1,51 @@
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #282d2f;
+    overflow: hidden;
+    height: 8vh;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover, #botonSalir{
+    background-color: #e4f757e4;
+    color: black;
+  }
+
+  .topnav a:hover{
+    height: 8vh;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #68cc90;
+    color: white;
+    height: 8vh;
+  }
+
+  .ultimo{
+    float: right;
+    padding: 6px 6px;
+    column-gap: 5px;
+    row-gap: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  #nombreUsuario{
+    color: #68cc90;
+    font-weight: bold;
+  }

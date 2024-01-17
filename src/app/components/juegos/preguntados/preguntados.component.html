@@ -1,0 +1,25 @@
+<section class="contenedor-principal">
+    <div class="titulo"><span>PREGUNTADOS</span></div>
+    <div class="informacion"><span>Puntuación: {{ score }}</span>
+        <span class="intentos">Intentos: {{ attempts }}/10</span>
+    </div>
+
+    <div class="contenedor-juego">
+        <div class="pregunta" *ngIf="activeGame"><span>¿Qué personaje tiene la siguiente ocupación: {{ocupacion}}?</span></div>
+        <p class="juego-terminado" [ngClass]="victory ? 'victoria' : 'derrota'" *ngIf="gameOver">
+            {{ gameOverText }}
+        </p>
+        <div class="botones" *ngIf="activeGame">
+            <button class="boton-carta button2" *ngFor="let option of currentQuestion.options" (click)="play(option.name, $event)"
+                [ngClass]="correctAnswer ? 'correcta' : ''" [ngClass]="wrongAnswer ? 'incorrecta' : ''">
+                <p class="nombre-personaje">{{ option.name }}</p>
+                <img class="imagen" src="{{ option.flag }}" alt="">
+            </button>
+        </div>
+        <div *ngIf="!activeGame">
+            <button class="btn-reiniciar" (click)="restartGame()">
+                Reiniciar Juego
+            </button>
+        </div>
+    </div>
+</section>

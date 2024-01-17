@@ -1,0 +1,185 @@
+.principal {
+    background-image: url(../../../assets/fondo-encuesta3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: calc(100vh - 8vh);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #e7c5ec;
+    border-radius: 20px;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.title span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+form {
+    width: 80vw;
+    max-width: 80vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-details {
+    width: 78vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.button {
+    width: 80vw;
+    height: 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.columna-derecha,
+.columna-izquierda {
+    width: 39vw;
+    height: 55vh;
+}
+
+.contenedor-pregunta {
+    width: 80vw;
+    height: 13vh;
+}
+
+.contenedor-pregunta-juegos{
+    width: 39vw;
+}
+
+.columna-izquierda,
+.columna-derecha,
+.input-box,
+.contenedor-pregunta-juegos,
+.contenedor-comentario,
+.contenedor-pregunta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.radios {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20vw;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.details{
+    font-size: 16px;
+
+}
+
+.clase-input {
+    width: 15vw;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    height: 45px;
+
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.clasificacion label {
+    color: grey;
+}
+
+.clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    font-size: 4rem;
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.clasificacion label:hover,
+.clasificacion label:hover~label {
+    color: rgb(135, 5, 85);
+}
+
+input[type="radio"]:checked~label {
+    color: rgb(135, 5, 85);
+}
+
+.boton-enviar {
+    width: 50vw;
+    background-color: #f5c470;
+
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.title span {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .title span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }

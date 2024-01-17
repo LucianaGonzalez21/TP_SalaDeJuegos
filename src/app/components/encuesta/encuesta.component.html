@@ -1,0 +1,134 @@
+<div class="principal">
+
+    <div class="container">
+        <div class="title"><span>ENCUESTA</span></div>
+        <form action="#" [formGroup]="formularioEncuesta">
+            <div class="user-details">
+                <div class="columna-izquierda">
+                    <div class="input-box">
+                        <span class="details">Nombre</span>
+                        <input formControlName="nombre" class="clase-input" type="text" placeholder="Ingrese su nombre" required>
+                        <span
+                            *ngIf="formularioEncuesta.controls['nombre'].errors?.['required'] && formularioEncuesta.controls['nombre'].touched"
+                            class="text-danger">El nombre es obligatorio</span>
+                        <span *ngIf="formularioEncuesta.controls['nombre'].errors?.['pattern']" class="text-danger">
+                            El nombre debe contener solo letras</span>
+                        <span
+                            *ngIf="formularioEncuesta.controls['nombre'].errors?.['containsSpaces'] && formularioEncuesta.controls['nombre'].touched"
+                            class="text-danger">El nombre no puede contener espacios vacios</span>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Apellido</span>
+                        <input formControlName="apellido" class="clase-input" type="text" placeholder="Ingrese su apellido" required>
+                        <span
+                            *ngIf="formularioEncuesta.controls['apellido'].errors?.['required'] && formularioEncuesta.controls['apellido'].touched"
+                            class="text-danger">El apellido es obligatorio</span>
+                        <span *ngIf="formularioEncuesta.controls['apellido'].errors?.['pattern']" class="text-danger">
+                            El apellido debe contener solo letras</span>
+                        <span
+                            *ngIf="formularioEncuesta.controls['apellido'].errors?.['containsSpaces'] && formularioEncuesta.controls['apellido'].touched"
+                            class="text-danger">El apellido no puede contener espacios vacios</span>
+                    </div>
+                    <div>
+                        <div >
+                            <div class="contenedor-comentario">
+                                <label for="comentario">Comentarios o sugerencias</label>
+                                <textarea formControlName="comentario" name="" id="comentario" cols="36" rows="3"></textarea>
+                                <span
+                                    *ngIf="formularioEncuesta.controls['comentario'].errors?.['minlength'] && formularioEncuesta.controls['comentario'].dirty"
+                                    class="text-danger">
+                                    El comentario debe tener al menos 10 caracteres
+                                </span>
+                                <span
+                                    *ngIf="formularioEncuesta.controls['comentario'].errors?.['maxlength'] && formularioEncuesta.controls['comentario'].dirty"
+                                    class="text-danger">
+                                    El comentario no puede tener mas de 100 caracteres
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-derecha">
+                    <div class="input-box">
+                        <span class="details">Edad</span>
+                        <input class="clase-input" formControlName="edad" type="text" placeholder="Ingrese su edad" required>
+                        <span
+                            *ngIf="formularioEncuesta.controls['edad'].errors?.['required'] && formularioEncuesta.controls['edad'].touched"
+                            class="text-danger">La edad es obligatoria</span>
+                        <span
+                            *ngIf="formularioEncuesta.controls['edad'].errors?.['containsSpaces'] && formularioEncuesta.controls['edad'].touched"
+                            class="text-danger">La edad no puede contener espacios vacios</span>
+                        <span
+                            *ngIf="formularioEncuesta.controls['edad'].errors?.['min'] && formularioEncuesta.controls['edad'].touched"
+                            class="text-danger">La edad mínima es 18</span>
+                        <span
+                            *ngIf="formularioEncuesta.controls['edad'].errors?.['max'] && formularioEncuesta.controls['edad'].touched"
+                            class="text-danger">La edad maxima es 99</span>
+                        <span *ngIf="formularioEncuesta.controls['edad'].errors?.['pattern']" class="text-danger">
+                            La edad debe contener solo numeros</span>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Numero de Teléfono</span>
+                        <input class="clase-input" formControlName="telefono" type="text" placeholder="Ingrese su número de telefono"
+                            required>
+                        <span
+                            *ngIf="formularioEncuesta.controls['telefono'].errors?.['required'] && formularioEncuesta.controls['telefono'].touched"
+                            class="text-danger">El teléfono es obligatorio</span>
+                        <span
+                            *ngIf="formularioEncuesta.controls['telefono'].errors?.['containsSpaces'] && formularioEncuesta.controls['telefono'].touched"
+                            class="text-danger">El teléfono no puede contener espacios vacios</span>
+                        <span
+                            *ngIf="formularioEncuesta.controls['telefono'].errors?.['maxlength'] && formularioEncuesta.controls['telefono'].touched"
+                            class="text-danger">El maximo de caracteres es 10</span>
+                        <span *ngIf="formularioEncuesta.controls['telefono'].errors?.['pattern']" class="text-danger">
+                            El telefono debe contener solo numeros</span>
+                    </div>
+                    <div>
+                        <div class="contenedor-pregunta-juegos">
+                            <label for="btncheck1">¿Qué juegos te gustaron?</label>
+                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                <input type="checkbox" name="juegos" class="btn-check" id="btncheck1" autocomplete="off"
+                                    value="ahorcado">
+                                <label class="btn btn-outline-primary" for="btncheck1">Ahorcado</label>
+
+                                <input type="checkbox" name="juegos" class="btn-check" id="btncheck2" autocomplete="off"
+                                    value="preguntados">
+                                <label class="btn btn-outline-primary" for="btncheck2">Preguntados</label>
+
+                                <input type="checkbox" name="juegos" class="btn-check" id="btncheck3" autocomplete="off"
+                                    value="mayorMenor">
+                                <label class="btn btn-outline-primary" for="btncheck3">Mayor o Menor</label>
+
+                                <input type="checkbox" name="juegos" class="btn-check" id="btncheck4" autocomplete="off"
+                                    value="pingPong">
+                                <label class="btn btn-outline-primary" for="btncheck4">Ping Pong</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class="contenedor-pregunta">
+                    <label for="">Califica la página</label>
+                    <div class="clasificacion">
+                        <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                        --><label for="radio1">★</label><!--
+                        --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                        --><label for="radio2">★</label><!--
+                        --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                        --><label for="radio3">★</label><!--
+                        --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                        --><label for="radio4">★</label><!--
+                        --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                        --><label for="radio5">★</label>
+                    </div>                
+            </div>
+            <div class="button">
+                <input type="submit" [disabled]="this.formularioEncuesta.invalid" class="boton-enviar" (click)="enviarEncuesta()" value="Enviar"> <!---->
+            </div>
+
+        </form>
+    </div>
+</div>
+<app-chat *ngIf="estaLogueado"></app-chat>

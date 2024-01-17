@@ -1,0 +1,20 @@
+<div class="principal">
+    <div>
+        <div class="titulo"><span>PING PONG</span></div>
+    </div>
+
+    <div class="contenedor-bajo">
+        <div class="informacion">
+            <div><span>Puntuación: {{this.pongGame.hits}}</span></div>
+            <div class="contenedor-botones">
+                <button class="btn-comenzar-reiniciar" *ngIf="gameOver" (click)="volverJugar()">Volver a Jugar</button>
+                <button class="btn-comenzar-reiniciar" *ngIf="!botonEmpezar" (click)="empezarJuego()">Empezar a Jugar</button>
+            </div>
+        </div>
+
+        <div class="juego">
+            <canvas #PongCanvas id="canvasa" width="{{width}}" height="{{height}}"></canvas>
+        </div>
+    </div>
+
+</div>

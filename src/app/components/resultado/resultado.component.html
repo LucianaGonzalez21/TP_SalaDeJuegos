@@ -1,0 +1,41 @@
+<div class=" Pantalla">
+  <div class="contenedor">
+    <div>
+      <div class="title titulo">RESULTADOS</div>
+    </div>
+    <div class="botones">
+      <button (click)="seEncontroJuego('ahorcado')">AHORCADO</button>
+      <button (click)="seEncontroJuego('mayor o menor')">MAYOR O MENOR</button>
+      <button (click)="seEncontroJuego('preguntados')">PREGUNTADOS</button>
+      <button (click)="seEncontroJuego('pingPong')">PING PONG</button>
+    </div>
+
+    <div class="div-tabla"> <!--*ngIf="seBuscoJuego"-->
+      <div class="title titulo-juego" *ngIf="seBuscoJuego else NoSeBuscoJuego">{{nombreJuego}}</div>
+      <ng-template #NoSeBuscoJuego>
+        <div class="title titulo-juego">Seleccione un juego</div>
+      </ng-template>
+      <div class="tabla">
+        <table class="table table-success table-striped">
+          <thead>
+            <tr>
+              <th scope="col">FECHA</th>
+              <th scope="col">NOMBRE</th>
+              <th scope="col">EMAIL</th>
+              <th scope="col">PUNTOS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let resultadoElegido of resultados; index as i">
+              <td>{{resultadoElegido.fecha}}</td>
+              <td>{{resultadoElegido.nombre}}</td>
+              <td>{{resultadoElegido.email}}</td>
+              <td>{{resultadoElegido.puntos}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<app-chat *ngIf="estaLogueado"></app-chat>

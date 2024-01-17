@@ -1,0 +1,13 @@
+<div class="topnav">
+    <a class="active" routerLink="home">Home</a>
+    <a [hidden]="logueado" routerLink="login">Login</a>
+    <a [hidden]="!logueado" routerLink="juegos">Juegos</a> <!--[hidden]="!logueado"-->
+    <a [hidden]="!logueado" routerLink="resultado">Resultados</a> <!--[hidden]="!logueado"-->
+    <a routerLink="quien-soy">Quien soy</a>
+    <a [hidden]="!logueado" routerLink="encuesta">Encuesta</a>
+    <a [hidden]="logueado" routerLink="registro">Registro</a>
+    <div class="ultimo">
+      <div><label [hidden]="!logueado" id="nombreUsuario">{{nombre}}</label></div>
+      <div><button [hidden]="!logueado" id="botonSalir" class="btn btn-dark" (click)="salir()">Logout</button></div>      
+    </div>
+  </div>

@@ -1,0 +1,25 @@
+.principal {
+    background-image: url("../../../assets/error.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 8vh);
+    position: fixed;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.centered-div {
+    width: 50%;
+    text-align: center;
+    background-color: rgba(19, 13, 22, 0.955);
+    /*background: -webkit-linear-gradient(#aa1496, #B993D6);*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}

@@ -1,0 +1,41 @@
+
+<div class="principal">
+    <div class="grid-principal">
+        <div class="contenedor-titulo">
+            <div class="titulo">
+                <p><span>AHORCADO</span></p>
+                <p><span class="intentos">Intentos {{ attempts }}/6</span></p>
+            </div>
+        </div>
+
+        <div class="imagen-ahorcado">
+            <span class="puntaje">Tu puntaje: {{ score }}</span>
+            <img class="img-horca" src="../../../../assets/juegos/horca_{{image }}.png" alt="horca" />
+            <div *ngIf="!activeGame">
+                <button class="btn-reiniciar" (click)="restartGame()">JUGAR DE NUEVO</button>
+            </div>
+        </div>
+
+        <div class="div-palabra">
+          <div>
+            <p><span>Tu palabra:</span></p>
+          </div>
+          <div class="palabra-adivinar">
+            <div *ngFor="let hyphen of hyphenatedWord" class="d-inline letra">
+              <h1 class="d-inline p-2 mt-5 ">{{ hyphen }}</h1>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="div-teclado">
+            <div class="grid-botones">
+                <button *ngFor="let letter of buttonLetters; let i=index" id="boton{{i}}" class="btn-letra"
+                    (click)="sendLetter(letter, i)">
+                    {{ letter }}
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

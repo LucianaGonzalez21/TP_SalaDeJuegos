@@ -1,0 +1,50 @@
+<div class="principal">
+  <div class="container">
+    <div class="title">Registro<img class="icono" src="../../../assets/juego-arcade.png" alt=""></div>
+    <div class="content">
+      <form action="#" [formGroup]="formularioRegistro">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Nombre</span>
+            <input formControlName="nombre" type="text" placeholder="Ingrese su nombre" required>
+            <p *ngIf="formularioRegistro.controls['nombre'].errors?.['required'] && formularioRegistro.controls['nombre'].touched"
+              class="text-danger">El nombre es obligatorio</p>
+            <p *ngIf="formularioRegistro.controls['nombre'].errors?.['containsSpaces'] && formularioRegistro.controls['nombre'].touched"
+              class="text-danger"> El nombre no puede contener espacios</p>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input formControlName="email" type="text" placeholder="Ingrese su email" required>
+            <p *ngIf="formularioRegistro.controls['email'].errors?.['required'] && formularioRegistro.controls['email'].touched"
+              class="text-danger">El email es obligatorio</p>
+            <p *ngIf="formularioRegistro.controls['email'].errors?.['pattern']" class="text-danger">
+              Formato no valido de email</p>
+            <p *ngIf="formularioRegistro.controls['email'].errors?.['containsSpaces'] && formularioRegistro.controls['email'].touched"
+              class="text-danger">El email no puede contener espacios</p>
+          </div>
+          <div class="input-box">
+            <span class="details">Clave</span>
+            <input formControlName="clave" type="password" placeholder="Ingrese la clave" required>
+            <p *ngIf="formularioRegistro.controls['clave'].errors?.['required'] && formularioRegistro.controls['clave'].touched"
+              class="text-danger">La clave es obligatoria</p>
+            <p *ngIf="formularioRegistro.controls['clave'].errors?.['minlength'] && formularioRegistro.controls['clave'].touched"
+              class="text-danger">La clave debe tener al menos 6 caracteres</p>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirmacion de clave</span>
+            <input formControlName="claveConfirmacion" type="password" placeholder="Confirme la clave" required>
+            <p *ngIf="formularioRegistro.controls['claveConfirmacion'].errors?.['required'] && formularioRegistro.controls['claveConfirmacion'].touched"
+              class="text-danger">La clave es obligatoria</p>
+            <p *ngIf="formularioRegistro.controls['claveConfirmacion'].errors?.['minlength'] && formularioRegistro.controls['claveConfirmacion'].touched"
+              class="text-danger">La clave debe tener al menos 6 caracteres</p>
+            <p *ngIf="formularioRegistro.errors?.['notEquivalent'] && formularioRegistro.controls['claveConfirmacion'].touched && formularioRegistro.controls['clave'].touched"
+              class="text-danger">Las claves deben coincidir</p>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" (click)="registrar()" [disabled]="this.formularioRegistro.invalid" value="Registrarse">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

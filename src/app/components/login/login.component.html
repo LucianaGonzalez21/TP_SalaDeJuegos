@@ -1,0 +1,51 @@
+<div class="principal">
+
+  <div class="container">
+    <div class="title">Login<img class="icono" src="../../../assets/video-games.png" alt=""></div>
+    <div class="content">
+      <form action="#" [formGroup]="formularioIngreso">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input formControlName="emailControlador" type="text" placeholder="Ingrese su email" required>
+            <p
+              *ngIf="formularioIngreso.controls['emailControlador'].errors?.['required'] && formularioIngreso.controls['emailControlador'].touched"
+              class="text-danger">El email es obligatorio</p>
+            <p *ngIf="formularioIngreso.controls['emailControlador'].errors?.['pattern']" class="text-danger">
+              Formato no valido de email</p>
+              <p *ngIf="formularioIngreso.controls['emailControlador'].errors?.['containsSpaces'] && formularioIngreso.controls['emailControlador'].touched"
+              class="text-danger">El email no puede contener espacios</p>
+          </div>
+          <div class="input-box">
+            <span class="details">Clave</span>
+            <input formControlName="claveControlador" type="password" placeholder="Ingrese la clave" required>
+            <p
+              *ngIf="formularioIngreso.controls['claveControlador'].errors?.['required'] && formularioIngreso.controls['claveControlador'].touched"
+              class="text-danger">La clave es obligatoria</p>
+            <p
+              *ngIf="formularioIngreso.controls['claveControlador'].errors?.['minlength'] && formularioIngreso.controls['claveControlador'].touched"
+              class="text-danger">La clave debe tener al menos 6 caracteres</p>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" (click)="ingreso()" [disabled]="this.formularioIngreso.invalid" value="Enviar">
+        </div>
+
+        <div class="">
+          <div class="flex-container">
+            <div class="button acceso-rapido" id="accesoRapido">
+              <input class="boton-acceso" type="submit" (click)="accederRapido('admin')" value="Administrador">
+            </div>
+            <div class="button acceso-rapido" id="accesoRapido">
+              <input class="boton-acceso" type="submit" (click)="accederRapido('usuario')" value="Usuario">
+            </div>
+            <div class="button acceso-rapido" id="accesoRapido">
+              <input class="boton-acceso" type="submit" (click)="accederRapido('invitado')" value="Invitado">
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

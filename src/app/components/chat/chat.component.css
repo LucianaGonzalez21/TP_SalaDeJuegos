@@ -1,0 +1,179 @@
+.cardContainer{
+    width: 300px;
+    height: 500px;
+    position: fixed;
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+  
+  .card-header{
+    background-color: rgb(102, 102, 243);
+    color: white;
+    font-weight: 700;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .card-header img{
+    width: 30%;
+    height: 30%;
+  }
+  
+  .card-body{
+    padding: 0.5rem;
+    /*background-image: url(https://media.istockphoto.com/id/1403848173/vector/vector-online-chatting-pattern-online-chatting-seamless-background.jpg?s=612x612&w=0&k=20&c=W3O15mtJiNlJuIgU6S9ZlnzM_yCE27eqwTCfXGYwCSo=);*/
+    background-image: url("../../../assets/fondoChat.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .email-1 {
+    font-size: 0.7;
+    color: rgb(49, 199, 240);
+  }
+  
+  .email-2 {
+    font-size: 0.7;
+    color: #ebb870;
+  }
+  
+  .enviado{
+    display: block;
+    float: right;
+    background-color: teal;
+    color: white;
+    min-width: 50.01%;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .recibido{
+    display: block;
+    float: left;
+    background-color: rgb(21, 30, 207);
+    color: white;
+    min-width: 50.01%;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .contenedorDeMensajes{
+    /*overflow: scroll;*/
+    padding: 0.3rem;
+    max-height: 400px;
+    height: 500px;
+    overflow-y: scroll;
+  }
+  
+  .contenedorDeMensajes::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .chatIconContainer{
+    position: fixed;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    /*cursor: pointer;*/
+    background-color: rgb(200, 51, 51);
+    border-radius: 100%;
+    /*box-shadow: 0 0 10px 2px rgb(71, 71, 71);*/
+    box-shadow: 5px 10px #000000;
+    border: solid;
+  }
+
+  .chatIconContainer:hover {
+    background-color:  rgb(200, 51, 51);
+    box-shadow: none;
+    cursor: pointer;
+    /*box-shadow: 0px 15px 20px rgba(255, 255, 255, 0.4);*/
+    /*color: #fff;*/
+    transform: translateY(10px);
+  }
+  
+  .chatIcon{
+    width: 70px;
+    height: 70px;
+  }
+  
+  /*.closeIcon{
+    position: absolute;
+    right: 0.5rem;
+    top: 0rem;
+    cursor: pointer;
+  }*/
+
+  .card-footer{
+    background-color: black;
+  }
+
+  .input-group-text{
+    align-items: stretch;
+  }
+
+  .div-salir{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40%;
+  }
+
+  .div-salir img{
+    cursor:pointer;
+  }
+
+  .div-chat{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60%;
+  }
+
+  .contenedor-mensaje{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    max-height: 20%;
+    height: 20%;
+  }
+
+  .contenedor-mensaje button{
+    background-color: #38cbde;
+    border-radius: 10%;
+    max-width: 10%;
+    width: 10%;
+    height: 90%;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .div-input-mensaje{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    width: 90%;
+    border-radius: 5%;
+    border: groove;
+  }
+
+.contenedor-mensaje button img{
+  width: 100%;
+  height: 100%;
+}

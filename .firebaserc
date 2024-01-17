@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tpsaladejuegos-f71b8": {
+      "hosting": {
+        "clase1": [
+          "tpsaladejuegos-f71b8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tpsaladejuegos-f71b8"
+  }
+}

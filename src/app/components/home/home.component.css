@@ -1,0 +1,31 @@
+.principal {
+    background-image: url("../../../assets/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    height: calc(100vh - 8vh);
+    position: fixed;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.centered-div {
+    width: 40%;
+    /* Establece el ancho deseado para el div */
+    text-align: center;
+    /* Centra el contenido dentro del div horizontalmente */
+    background-color: rgb(207, 171, 228);
+    /*background: -webkit-linear-gradient(#aa1496, #B993D6);*/
+    top: 20%;
+    left: 50%;
+    height: 30%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+}

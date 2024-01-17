@@ -1,0 +1,87 @@
+.Pantalla {
+    /*background-image: url("../../../assets/imagenes/juegos/fondoGamerTabla.gif");*/
+    background-color: blue;
+    width: 100vw;
+    height: calc(100vh - 8vh);
+    background-image: url(../../../assets/fondo-resultado.jpg!d);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tablita {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* margin: 0 auto; */
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    color: #FFFFFF;
+}
+
+.titulo,
+.botones,
+.botones {
+    height: 10vh;
+}
+
+.tabla {
+    height: 30vh;
+}
+
+.div-tabla,
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    width: 40vw;
+    height: 70vh;
+    background-color: rgb(175, 129, 225);
+    border-radius: 5px;
+}
+
+.botones {
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.botones button {
+    height: 7vh;
+    background-color: rgb(210, 60, 60);
+    border-radius: 5%;
+    /*box-shadow: 0 0 10px 2px rgb(71, 71, 71);*/
+    box-shadow: 5px 10px #000000;
+    border: solid;
+}
+
+.botones button:hover {
+    background-color: rgb(210, 60, 60);
+    box-shadow: none;
+    cursor: pointer;
+    transform: translateY(10px);
+}
+
+table{
+    width: 35vw;
+}
+
+.tabla{
+    max-height: 30vh;
+    overflow: auto;
+    display:inline-block;
+}

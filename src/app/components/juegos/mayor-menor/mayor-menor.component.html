@@ -1,0 +1,32 @@
+
+<div class="principal">
+
+  <div class="grid-principal">
+    <div class="titulo">
+      <span>MAYOR O MENOR</span>
+    </div>
+
+    <div class="mazo-izquierda">
+      <span class="puntuacion">Tu puntuación: {{ score }}</span>
+      <img class="carta-izquierda" src="{{ cardImage }}" alt="" />
+    </div>
+
+    <div class="mazo-derecha">
+      <span class="intentos">Intentos: {{ attempts }}/10</span>
+      <img class="carta-derecha" src="../../../../assets/juegos/mayor-menor/reverso.jpg" alt="" />
+    </div>
+
+    <div class="botones-juego">
+      <div *ngIf="!activeGame">
+        <button class="btn-comenzar-reiniciar" (click)="startGame()">
+          {{ startButtonText }}
+        </button>
+      </div>
+      <div class="btn-mayormenor" *ngIf="activeGame">
+        <div><button class="btn-menor" (click)="playMayorMenor('menor')">Menor</button></div>
+        <div><button class="btn-mayor" (click)="playMayorMenor('mayor')">Mayor</button></div>  
+      </div>
+    </div>
+  </div>
+
+</div>
